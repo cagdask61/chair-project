@@ -11,7 +11,6 @@ export default function App() {
 
   return (
     <div className='w-full h-full'>
-
       <Configuration />
       <Canvas shadows>
         <color attach={'background'} args={['#303030']} />
