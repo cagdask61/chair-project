@@ -12,7 +12,7 @@ const Configuration = () => {
 
     function textureStateChange(key) {
         textureState.change(key)
-        window.location.reload()
+        // window.location.reload()
     }
     return (
         <>
