@@ -38,7 +38,7 @@ const Configuration = () => {
                             <span className="text-white text-center text-sm">Dokular</span>
                             <div className="grid grid-cols-12 gap-3">
                                 {textures.map((texture) => (
-                                    <button key={texture.key} onClick={() => textureStateChange(texture.key)} className={"w-14 h-14 col-span-4 rounded-full hover:outline hover:outline-1 hover:outline-white " + (textureState.key === texture.key ? "outline outline-2 outline-white" : "")}>
+                                    <button title={texture.title} key={texture.key} onClick={() => textureStateChange(texture.key)} className={"w-14 h-14 col-span-4 rounded-full hover:outline hover:outline-1 hover:outline-white " + (textureState.key === texture.key ? "outline outline-2 outline-white" : "")}>
                                         <img draggable={false} className="object-cover rounded-full w-full h-full" src={texture.material} alt={texture.title} />
                                     </button>
                                 ))}

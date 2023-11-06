@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useTextureStore = create((set) => ({
-    key: localStorage.getItem('texture'),
+    key: localStorage.getItem('texture') ?? 'base',
     change: (newValue) => set(() => {
         localStorage.setItem('texture', newValue);
         return {

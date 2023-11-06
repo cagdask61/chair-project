@@ -4,10 +4,12 @@ import { PresentationControls, Stage, MeshReflectorMaterial } from "@react-three
 import Configuration from './components/Configuration';
 import useCameraStore from './store/use-camera-store';
 import Chair from './components/Chair';
+import { useEffect } from 'react';
 
 export default function App() {
 
   const cameraZoomState = useCameraStore((state) => state.zoom)
+
 
   return (
     <div className='w-full h-full'>

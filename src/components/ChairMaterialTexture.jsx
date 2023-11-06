@@ -1,8 +1,11 @@
 import * as THREE from 'three'
-import useTextures from '../hooks/use-textures'
+import { useTexture } from '@react-three/drei'
 
-export default function MaterialTexture({ name }) {
-    const texture = useTextures(name)
+import textures from '../data/textures';
+
+export default function ChairMaterialTexture({ name }) {
+
+    const texture = useTexture(textures.find((t) => t.key === name).path);
 
     texture.map.repeat.set(2, 2);
     texture.displacementMap.repeat.set(2, 2);
